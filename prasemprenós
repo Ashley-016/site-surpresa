@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Você</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Surpresa!</h1>
+    <p>Eu te amo há <span id="contador"></span>.</p>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    background-color: #ffccff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #ff66cc;
+}
+const startDate = new Date("2023-02-14"); 
+const currentDate = new Date();
+const diffTime = currentDate - startDate;
+const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+document.getElementById("contador").innerText = `${days} dias`;
